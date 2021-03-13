@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Code</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class='back'>
+    <div class='pak'>Press a key</div>
+    <div class='keyVal'>Key</div>
+    <div class='keyVal middle'>=</div>
+    <div class='keyVal'>KeyCode</div>
+</div>
+
+
+<script>
+    function displayKey(e) {
+        //Hide default message if not already hidden
+        var backDiv = document.getElementsByClassName('pak')[0];
+        if (backDiv.style.display !== 'none') backDiv.style.display = 'none';
+        //Display output if not already displayed
+        var keyVal = Array.from(document.getElementsByClassName('keyVal'));
+
+        keyVal.forEach(element => {
+            if (element.style.display !== 'block') element.style.display = 'block';
+        });
+
+        keyVal[0].innerHTML = `${e.key}`;
+        keyVal[2].innerHTML = `${e.keyCode}`;
+    }
+
+
+    window.addEventListener('keydown', displayKey);
+</script>
+</body>
+</html>
