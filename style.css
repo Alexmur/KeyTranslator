@@ -1,11 +1,18 @@
 html{
     background-color: #ccc;
+    font-family: Helvetica, sans-serif;
+}
+
+.header {
+    margin-left: 16px;
+    font-size: 48px;
+    color: #888;
 }
 
 .back {
     display: flex;
     flex: 1;
-    min-height: 100vh;
+    min-height: 90vh;
     align-items: center;
     justify-content: center;
 }
@@ -32,4 +39,18 @@ html{
     margin-left: 16px;
     margin-right: 16px;
     border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-left: 16px;
+    color: #888;
 }

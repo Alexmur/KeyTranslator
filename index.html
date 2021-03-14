@@ -7,6 +7,8 @@
 </head>
 
 <body>
+
+<div class='header'>Key Translator</div>
 <div class='back'>
     <div class='pak'>Press a key</div>
     <div class='keyVal'>Key</div>
@@ -27,12 +29,20 @@
             if (element.style.display !== 'block') element.style.display = 'block';
         });
 
-        keyVal[0].innerHTML = `${e.key}`;
-        keyVal[2].innerHTML = `${e.keyCode}`;
+        if (e.keyCode == 32) {
+            keyVal[0].innerHTML = `Space`;
+            keyVal[2].innerHTML = `${e.keyCode}`;
+        } else {
+            keyVal[0].innerHTML = `${e.key}`;
+            keyVal[2].innerHTML = `${e.keyCode}`;
+        }
     }
 
 
     window.addEventListener('keydown', displayKey);
 </script>
 </body>
+<footer>
+    &copy; 2021 <a href='https://github.com/Alexmur?tab=repositories' target='_blank'>Alex Murawski</a> 
+</footer>
 </html>
